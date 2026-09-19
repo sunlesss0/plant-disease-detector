@@ -8,11 +8,11 @@ st.set_page_config(page_title="Plant Disease Detector", page_icon="🌿")
 
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('model/plant_disease_model.keras')
+    return tf.keras.models.load_model('plant/model/plant_disease_model.keras')
 
 @st.cache_resource
 def load_disease_info():
-    with open('data/plant_disease_info.json') as f:
+    with open('plant/data/plant_disease_info.json') as f:
         return json.load(f)
 
 model = load_model()
